@@ -9,6 +9,7 @@ import ContactSection from './components/ContactSection.vue'
 import Footer from './components/Footer.vue'
 </script>
 
+
 <template>
   <div class="min-h-screen selection:bg-accent/30 selection:text-accent">
     <Navbar />
