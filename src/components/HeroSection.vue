@@ -48,14 +48,14 @@
         </div>
       </div>
 
-      <HeroAvatar />
+      <HeroAvatar2 />
     </div>
   </section>
 </template>
 <script setup lang="ts">
 import { Github, Linkedin, Mail, ArrowRight, Download } from 'lucide-vue-next'
 import { heroContent, heroSocialLinks } from '../data/content.ts'
-import HeroAvatar from './HeroAvatar.vue'
+import HeroAvatar2 from './HeroAvatar2.vue'
 
 const socialIcons = {
   github: Github,
