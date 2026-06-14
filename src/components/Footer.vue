@@ -1,23 +1,11 @@
-<script setup lang="ts">
-import { Github, Linkedin, Mail } from 'lucide-vue-next'
-
-const currentYear = new Date().getFullYear()
-
-const socialLinks = [
-  { icon: Github, href: 'https://github.com/WangaTshikombedze', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com/in/wangatshikombedze', label: 'LinkedIn' },
-  { icon: Mail, href: 'mailto:contact@wanga.dev', label: 'Email' },
-]
-</script>
-
 <template>
   <footer class="py-12 px-6 border-t border-neutral-900 bg-neutral-950">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
       <!-- Logo & Copyright -->
       <div class="text-center md:text-left">
-        <p class="text-xl font-bold tracking-tighter mb-2">WT</p>
+        <p class="text-xl font-bold tracking-tighter mb-2">{{ footerContent.logo }}</p>
         <p class="text-sm text-neutral-500">
-          © {{ currentYear }} Wanga Tshikombedze. <br class="md:hidden" /> All rights reserved.
+          © {{ currentYear }} {{ footerContent.name }}. <br class="md:hidden" /> {{ footerContent.rightsText }}
         </p>
       </div>
 
@@ -42,3 +30,20 @@ const socialLinks = [
     </div>
   </footer>
 </template>
+<script setup lang="ts">
+import { Github, Linkedin, Mail } from 'lucide-vue-next'
+import { footerContent, footerSocialLinks } from '../data/content.ts'
+
+const currentYear = new Date().getFullYear()
+
+const socialIcons = {
+  github: Github,
+  linkedin: Linkedin,
+  mail: Mail,
+}
+
+const socialLinks = footerSocialLinks.map((social) => ({
+  ...social,
+  icon: socialIcons[social.icon],
+}))
+</script>

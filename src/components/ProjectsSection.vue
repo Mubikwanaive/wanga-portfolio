@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { Github, ExternalLink } from 'lucide-vue-next'
 import { projects } from '../data/projects'
+import { sectionHeadings } from '../data/content.ts'
 </script>
 
 <template>
   <section id="projects" class="py-24 px-6 bg-neutral-900/30">
     <div class="max-w-7xl mx-auto mb-16">
-      <h2 class="text-3xl font-bold tracking-tight mb-4">Selected Projects</h2>
+      <h2 class="text-3xl font-bold tracking-tight mb-4">{{ sectionHeadings.projectsTitle }}</h2>
       <div class="w-12 h-1 bg-accent rounded-full mb-8"></div>
     </div>
 

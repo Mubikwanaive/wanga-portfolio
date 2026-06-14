@@ -1,14 +1,15 @@
 <script setup lang="ts">
 import { skillCategories } from '../data/skills'
+import { sectionHeadings } from '../data/content.ts'
 </script>
 
 <template>
   <section id="skills" class="py-24 px-6">
     <div class="max-w-7xl mx-auto text-center mb-16">
-      <h2 class="text-3xl font-bold tracking-tight mb-4">Technical Skills</h2>
+      <h2 class="text-3xl font-bold tracking-tight mb-4">{{ sectionHeadings.skillsTitle }}</h2>
       <div class="w-12 h-1 bg-accent rounded-full mx-auto mb-8"></div>
       <p class="text-neutral-400 max-w-2xl mx-auto">
-        A diverse toolkit ranging from high-level frontend frameworks to low-level engineering and assembly.
+        {{ sectionHeadings.skillsDescription }}
       </p>
     </div>
 

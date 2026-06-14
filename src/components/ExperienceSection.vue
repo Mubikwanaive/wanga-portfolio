@@ -1,31 +1,12 @@
 <script setup lang="ts">
-const experiences = [
-  {
-    period: '2023 - Present',
-    role: 'Software Developer',
-    company: 'Innovation Hub',
-    description: 'Developing and maintaining web applications using Vue 3 and Node.js. Implementing mechatronic monitoring systems for industrial automation.'
-  },
-  {
-    period: '2021 - 2023',
-    role: 'Graduate Mechatronics Engineer',
-    company: 'Engineering Solutions Ltd',
-    description: 'Designed and implemented control systems for automated manufacturing lines. Focused on efficiency and error reduction in PLC programming.'
-  },
-  {
-    period: '2017 - 2021',
-    role: 'Engineering Student',
-    company: 'University of Technology',
-    description: 'Completed a Bachelor of Science in Mechatronics Engineering. Specialized in Robotics and Embedded Systems.'
-  }
-]
+import { experiences, experienceTitle } from '../data/content.ts'
 </script>
 
 <template>
   <section id="experience" class="py-24 px-6">
     <div class="max-w-7xl mx-auto">
       <div class="mb-16">
-        <h2 class="text-3xl font-bold tracking-tight mb-4">Experience</h2>
+        <h2 class="text-3xl font-bold tracking-tight mb-4">{{ experienceTitle }}</h2>
         <div class="w-12 h-1 bg-accent rounded-full mb-8"></div>
       </div>
 
